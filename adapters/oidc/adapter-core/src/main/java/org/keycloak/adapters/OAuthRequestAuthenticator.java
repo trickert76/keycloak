@@ -295,6 +295,8 @@ public class OAuthRequestAuthenticator {
 
             @Override
             public boolean challenge(HttpFacade exchange) {
+        		// TODO KEYCLOAK-12708
+
                 OIDCAuthenticationError error = new OIDCAuthenticationError(reason, description);
                 exchange.getRequest().setError(error);
                 exchange.getResponse().sendError(code);

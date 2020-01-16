@@ -213,6 +213,8 @@ public class KeycloakOIDCFilter implements Filter {
             challenge.challenge(facade);
             return;
         }
+        
+		// TODO KEYCLOAK-12708
         response.sendError(403);
 
     }
